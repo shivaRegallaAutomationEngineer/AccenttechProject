@@ -1,0 +1,200 @@
+[1661003815.339][INFO]: Starting ChromeDriver 104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}) on port 32090
+[1661003815.340][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1661003815.903][INFO]: [b68b8c8315852aeb108a2cea50eda033] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [  ],
+            "extensions": [  ]
+         }
+      } ]
+   },
+   "desiredCapabilities": {
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [  ],
+         "extensions": [  ]
+      }
+   }
+}
+[1661003815.911][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1661003815.912][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1661003815.916][INFO]: Launching chrome: "C:\Program Files\Google\Chrome\Application\chrome.exe" --allow-pre-commit-input --disable-background-networking --disable-backgrounding-occluded-windows --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-blink-features=ShadowDOMV0 --enable-logging --log-level=0 --no-first-run --no-service-autorun --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\SHIVAR~1\AppData\Local\Temp\scoped_dir15636_501335296" data:,
+[1661003817.151][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1661003817.912][INFO]: [b68b8c8315852aeb108a2cea50eda033] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": false,
+      "browserName": "chrome",
+      "browserVersion": "104.0.5112.82",
+      "chrome": {
+         "chromedriverVersion": "104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307})",
+         "userDataDir": "C:\\Users\\SHIVAR~1\\AppData\\Local\\Temp\\scoped_dir15636_501335296"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:50551"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:extension:credBlob": true,
+      "webauthn:extension:largeBlob": true,
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "b68b8c8315852aeb108a2cea50eda033"
+}
+[1661003818.023][INFO]: [b68b8c8315852aeb108a2cea50eda033] COMMAND SetTimeouts {
+   "implicit": 15000
+}
+[1661003818.023][INFO]: [b68b8c8315852aeb108a2cea50eda033] RESPONSE SetTimeouts
+[1661003818.047][INFO]: [b68b8c8315852aeb108a2cea50eda033] COMMAND Navigate {
+   "url": "https://opensource-demo.orangehrmlive.com/"
+}
+[1661003818.047][INFO]: Waiting for pending navigations...
+[1661003818.054][INFO]: Done waiting for pending navigations. Status: ok
+[1661003819.117][INFO]: Waiting for pending navigations...
+[1661003821.314][INFO]: Done waiting for pending navigations. Status: ok
+[1661003821.314][INFO]: [b68b8c8315852aeb108a2cea50eda033] RESPONSE Navigate
+[1661003821.409][INFO]: [b68b8c8315852aeb108a2cea50eda033] COMMAND FindElement {
+   "using": "css selector",
+   "value": "*[name='username']"
+}
+[1661003821.409][INFO]: Waiting for pending navigations...
+[1661003821.412][INFO]: Done waiting for pending navigations. Status: ok
+[1661003821.822][INFO]: Waiting for pending navigations...
+[1661003821.827][INFO]: Done waiting for pending navigations. Status: ok
+[1661003821.827][INFO]: [b68b8c8315852aeb108a2cea50eda033] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "931ac0ea-6c98-4ca6-8a22-702d3b9ed46d"
+}
+[1661003821.858][INFO]: [b68b8c8315852aeb108a2cea50eda033] COMMAND TypeElement {
+   "id": "931ac0ea-6c98-4ca6-8a22-702d3b9ed46d",
+   "text": "Admin",
+   "value": [ "A", "d", "m", "i", "n" ]
+}
+[1661003821.858][INFO]: Waiting for pending navigations...
+[1661003821.859][INFO]: Done waiting for pending navigations. Status: ok
+[1661003821.937][INFO]: Waiting for pending navigations...
+[1661003821.944][INFO]: Done waiting for pending navigations. Status: ok
+[1661003821.944][INFO]: [b68b8c8315852aeb108a2cea50eda033] RESPONSE TypeElement
+[1661003821.951][INFO]: [b68b8c8315852aeb108a2cea50eda033] COMMAND FindElement {
+   "using": "css selector",
+   "value": "*[name='password']"
+}
+[1661003821.951][INFO]: Waiting for pending navigations...
+[1661003821.952][INFO]: Done waiting for pending navigations. Status: ok
+[1661003821.967][INFO]: Waiting for pending navigations...
+[1661003821.968][INFO]: Done waiting for pending navigations. Status: ok
+[1661003821.968][INFO]: [b68b8c8315852aeb108a2cea50eda033] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "6ece6594-f545-4334-b0db-4fb776336856"
+}
+[1661003821.982][INFO]: [b68b8c8315852aeb108a2cea50eda033] COMMAND TypeElement {
+   "id": "6ece6594-f545-4334-b0db-4fb776336856",
+   "text": "admin123",
+   "value": [ "a", "d", "m", "i", "n", "1", "2", "3" ]
+}
+[1661003821.982][INFO]: Waiting for pending navigations...
+[1661003821.982][INFO]: Done waiting for pending navigations. Status: ok
+[1661003822.153][INFO]: Waiting for pending navigations...
+[1661003822.192][INFO]: Done waiting for pending navigations. Status: ok
+[1661003822.192][INFO]: [b68b8c8315852aeb108a2cea50eda033] RESPONSE TypeElement
+[1661003822.198][INFO]: [b68b8c8315852aeb108a2cea50eda033] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//button[@type='submit']"
+}
+[1661003822.198][INFO]: Waiting for pending navigations...
+[1661003822.199][INFO]: Done waiting for pending navigations. Status: ok
+[1661003822.217][INFO]: Waiting for pending navigations...
+[1661003822.218][INFO]: Done waiting for pending navigations. Status: ok
+[1661003822.218][INFO]: [b68b8c8315852aeb108a2cea50eda033] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "9cffdf1c-007d-400d-8711-e2559bdc72c4"
+}
+[1661003822.229][INFO]: [b68b8c8315852aeb108a2cea50eda033] COMMAND ClickElement {
+   "id": "9cffdf1c-007d-400d-8711-e2559bdc72c4"
+}
+[1661003822.229][INFO]: Waiting for pending navigations...
+[1661003822.231][INFO]: Done waiting for pending navigations. Status: ok
+[1661003822.288][INFO]: Waiting for pending navigations...
+[1661003822.326][INFO]: Done waiting for pending navigations. Status: ok
+[1661003822.326][INFO]: [b68b8c8315852aeb108a2cea50eda033] RESPONSE ClickElement
+[1661003822.549][INFO]: [b68b8c8315852aeb108a2cea50eda033] COMMAND Screenshot {
+}
+[1661003822.549][INFO]: Waiting for pending navigations...
+[1661003825.965][INFO]: Done waiting for pending navigations. Status: ok
+[1661003825.968][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1661003826.107][INFO]: Waiting for pending navigations...
+[1661003826.108][INFO]: Done waiting for pending navigations. Status: ok
+[1661003826.108][INFO]: [b68b8c8315852aeb108a2cea50eda033] RESPONSE Screenshot "iVBORw0KGgoAAAANSUhEUgAABAoAAAI7CAYAAABlUnkeAAAAAXNSR0IArs4c6QAAIABJREFUeJzsvXmgHUWZNv5U9zl3TW6Sm32BhC0ERLYgCoiAoo7O6IyACzoI83OZmU9QURx1nPnUcT7FcRkFx3WccdTRUQdkUVFQ2Y2gEDbBhCRkX29yt9zlLN31+6O7uqver..."
+[1661003826.170][INFO]: [b68b8c8315852aeb108a2cea50eda033] COMMAND Quit {
+}
+[1661003826.499][INFO]: [b68b8c8315852aeb108a2cea50eda033] RESPONSE Quit

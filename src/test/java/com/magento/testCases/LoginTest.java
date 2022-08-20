@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import com.magento.base.BaseClass;
 
 import com.magento.pages.LoginPageElements;
+import com.magento.utils.CommonMethods;
 
 public class LoginTest extends BaseClass {
 	
@@ -14,9 +15,10 @@ public class LoginTest extends BaseClass {
 	public void validLogin() {
 	
 		LoginPageElements loginPage=new LoginPageElements();
-		loginPage.userName.sendKeys("Admin");
-		loginPage.password.sendKeys("admin123");
-		loginPage.loginButton.click();
+		CommonMethods.sendText(loginPage.userName, "Admin");
+		CommonMethods.sendText(loginPage.password,"admin123");
+		CommonMethods.click(loginPage.loginButton);
+		
 		//DashboardPageElements dashboardPage=new DashboardPageElements();
 	//	Assert.assertTrue(dashboardPage.dashboard.isDisplayed(),"Login is not happened successfully");
 		

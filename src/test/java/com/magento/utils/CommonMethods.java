@@ -33,131 +33,8 @@ public class CommonMethods extends BaseClass{
 		element.sendKeys(text);
 	}
 
-	/**
-	 * Method checks if radio/checkbox is enabled and clicks it
-	 * 
-	 * @param radioOrcheckbox
-	 * @param value
-	 */
-	public static void clickRadioOrCheckbox(List<WebElement> radioOrcheckbox, String value) {
-
-		String actualValue;
-
-		for (WebElement el : radioOrcheckbox) {
-			actualValue = el.getAttribute("value").trim();
-			if (el.isEnabled() && actualValue.equals(value)) {
-				el.click();
-				break;
-			}
-		}
-	}
-
-	/**
-	 * Method that checks if text is there and then selects it
-	 * 
-	 * @param element
-	 * @param textToSelect
-	 */
-	public static void selectDdValue(WebElement element, String textToSelect) {
-
-		try {
-			Select select = new Select(element);
-
-			List<WebElement> options = select.getOptions();
-
-			for (WebElement el : options) {
-				if (el.getText().equals(textToSelect)) {
-					select.selectByVisibleText(textToSelect);
-					break;
-				}
-			}
-
-		} catch (UnexpectedTagNameException e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Method that selects value by index
-	 * 
-	 * @param element
-	 * @param index
-	 */
-	public static void selectDdValue(WebElement element, int index) {
-
-		try {
-			Select select = new Select(element);
-			int size = select.getOptions().size();
-
-			if (size > index) {
-				select.selectByIndex(index);
-			}
-		} catch (UnexpectedTagNameException e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Methods that accept alerts and catches exception if alert is not present
-	 */
-	public static void acceptAlert() {
-
-		try {
-			Alert alert = driver.switchTo().alert();
-			alert.accept();
-
-		} catch (NoAlertPresentException e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Methods that dismiss alerts and catches exception if alert is not present
-	 */
-	public static void dismissAlert() {
-
-		try {
-			Alert alert = BaseClass.driver.switchTo().alert();
-			alert.dismiss();
-
-		} catch (NoAlertPresentException e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Methods that gets text of alert and catches exception if alert is not present
-	 * 
-	 * @return String alert text
-	 */
-	public static String getAlertText() {
-
-		String alertText = null;
-
-		try {
-			Alert alert = BaseClass.driver.switchTo().alert();
-			alertText = alert.getText();
-		} catch (NoAlertPresentException e) {
-			e.printStackTrace();
-		}
-
-		return alertText;
-	}
-
-	/**
-	 * Methods that sends text to alert and catches exception if alert is not
-	 * present
-	 * 
-	 */
-	public static void sendAlertText(String text) {
-		try {
-			Alert alert = BaseClass.driver.switchTo().alert();
-			alert.sendKeys(text);
-		} catch (NoAlertPresentException e) {
-			e.printStackTrace();
-		}
-	}
-
+	
+	
 	public static void switchToFrame(String nameOrId) {
 
 		try {
@@ -185,19 +62,7 @@ public class CommonMethods extends BaseClass{
 		}
 	}
 
-	/**
-	 * Method switches focus to child window
-	 */
-	public static void switchToChildWindow() {
-		String mainWindow = driver.getWindowHandle();
-		Set<String> windows = driver.getWindowHandles();
-		for (String window : windows) {
-			if (!window.equals(mainWindow)) {
-				driver.switchTo().window(window);
-				break;
-			}
-		}
-	}
+	
 
 	public static WebDriverWait getWaitObject() {
 		WebDriverWait wait = new WebDriverWait(driver, Constants.EXPLICIT_WAIT_TIME);
@@ -226,27 +91,6 @@ public class CommonMethods extends BaseClass{
 		getJSObject().executeScript("arguments[0].click();", element);
 	}
 
-	public static void scrollToElement(WebElement element) {
-		getJSObject().executeScript("arguments[0].scrollIntoView(true);", element);
-	}
-
-	/**
-	 * Method that will scroll the page down based on the passed pixel parameters
-	 * 
-	 * @param pixel
-	 */
-	public static void scrollDown(int pixel) {
-		getJSObject().executeScript("window.scrollBy(0," + pixel + ")");
-	}
-
-	/**
-	 * Method that will scroll the page up based on the passed pixel parameters
-	 * 
-	 * @param pixel
-	 */
-	public static void scrollUp(int pixel) {
-		getJSObject().executeScript("window.scrollBy(0,-" + pixel + ")");
-	}
 
 	/**
 	 * This Method will take a screenshot
